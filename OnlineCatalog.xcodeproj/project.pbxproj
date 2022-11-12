@@ -13,6 +13,8 @@
 		C118ECBC291F8808003ACE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C118ECBA291F8808003ACE59 /* Main.storyboard */; };
 		C118ECBE291F880B003ACE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C118ECBD291F880B003ACE59 /* Assets.xcassets */; };
 		C118ECC1291F880B003ACE59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C118ECBF291F880B003ACE59 /* LaunchScreen.storyboard */; };
+		C118ECC9291F8839003ACE59 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECC8291F8839003ACE59 /* Products.swift */; };
+		C118ECCF291F8FA0003ACE59 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECCE291F8FA0003ACE59 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C118ECBD291F880B003ACE59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C118ECC0291F880B003ACE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C118ECC2291F880B003ACE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C118ECC8291F8839003ACE59 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		C118ECCE291F8FA0003ACE59 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +63,30 @@
 				C118ECB4291F8808003ACE59 /* AppDelegate.swift */,
 				C118ECB6291F8808003ACE59 /* SceneDelegate.swift */,
 				C118ECB8291F8808003ACE59 /* ViewController.swift */,
+				C118ECCD291F8F4F003ACE59 /* NetworkService */,
+				C118ECCA291F8F03003ACE59 /* Model */,
 				C118ECBA291F8808003ACE59 /* Main.storyboard */,
 				C118ECBD291F880B003ACE59 /* Assets.xcassets */,
 				C118ECBF291F880B003ACE59 /* LaunchScreen.storyboard */,
 				C118ECC2291F880B003ACE59 /* Info.plist */,
 			);
 			path = OnlineCatalog;
+			sourceTree = "<group>";
+		};
+		C118ECCA291F8F03003ACE59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C118ECC8291F8839003ACE59 /* Products.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C118ECCD291F8F4F003ACE59 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				C118ECCE291F8FA0003ACE59 /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C118ECCF291F8FA0003ACE59 /* NetworkService.swift in Sources */,
 				C118ECB9291F8808003ACE59 /* ViewController.swift in Sources */,
+				C118ECC9291F8839003ACE59 /* Products.swift in Sources */,
 				C118ECB5291F8808003ACE59 /* AppDelegate.swift in Sources */,
 				C118ECB7291F8808003ACE59 /* SceneDelegate.swift in Sources */,
 			);
@@ -302,6 +326,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bikteev.OnlineCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,6 +357,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bikteev.OnlineCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
