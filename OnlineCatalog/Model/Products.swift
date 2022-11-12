@@ -4,9 +4,6 @@
 //
 //  Created by albik on 12.11.2022.
 //
-
-import Foundation
-
 // MARK: - Products
 struct Products: Codable {
     let products: [Product]
