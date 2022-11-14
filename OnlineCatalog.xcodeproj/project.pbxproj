@@ -120,9 +120,9 @@
 		C1E87632291FC130009691E0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C118ECB8291F8808003ACE59 /* ProductDetailViewController.swift */,
 				C1E87630291FC126009691E0 /* ProductTableViewController.swift */,
 				C13F277B2922060100CB43C5 /* ProductTableViewCell.swift */,
+				C118ECB8291F8808003ACE59 /* ProductDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";

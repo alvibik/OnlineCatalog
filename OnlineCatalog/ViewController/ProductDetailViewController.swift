@@ -7,9 +7,13 @@
 
 import UIKit
 
-class ProductDetailViewController: UIViewController {
+final class ProductDetailViewController: UIViewController {
     
+    //MARK: - Public properties
+  
     var product: Product!
+    
+    //MARK: - IBOutlets
     
     @IBOutlet var brandLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
@@ -20,6 +24,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet var productImage: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
+    //MARK: - Override methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +37,9 @@ class ProductDetailViewController: UIViewController {
         configure(with: product)
     }
     
-    func configure(with product: Product) {
+    //MARK: - Private methods
+    
+    private func configure(with product: Product) {
         
         NetworkManager.shared.fetchImage(from: product.images.randomElement()) { [weak self] result in
             switch result {
