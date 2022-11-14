@@ -9,7 +9,7 @@ import UIKit
 
 class ProductTableViewController: UITableViewController {
     
-    var products: [Product] = []
+    private var products: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +25,10 @@ class ProductTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+    //    override func numberOfSections(in tableView: UITableView) -> Int {
+    //        // #warning Incomplete implementation, return the number of sections
+    //        return 1
+    //    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -88,18 +88,26 @@ class ProductTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
-
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier != "productDetail" { return }
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let productDetailVC = segue.destination as! ProductDetailViewController
+            productDetailVC.product = products[indexPath.row]
+        }
+    }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // Get the new view controller using segue.destination.
+    // Pass the selected object to the new view controller.
 }
+
+
+
 extension ProductTableViewController {
     func fetchProducts() {
         NetworkManager.shared.fetch(Products.self, from: "https://dummyjson.com/products") { [weak self] result in

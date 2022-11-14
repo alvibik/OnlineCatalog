@@ -9,7 +9,7 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
     
-    var products: [Product] = []
+    //private var products: [Product] = []
 
     @IBOutlet var productThumbnailImage: UIImageView!
     @IBOutlet var productTitleLabel: UILabel!

@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		C118ECB5291F8808003ACE59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECB4291F8808003ACE59 /* AppDelegate.swift */; };
 		C118ECB7291F8808003ACE59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECB6291F8808003ACE59 /* SceneDelegate.swift */; };
-		C118ECB9291F8808003ACE59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECB8291F8808003ACE59 /* ViewController.swift */; };
+		C118ECB9291F8808003ACE59 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECB8291F8808003ACE59 /* ProductDetailViewController.swift */; };
 		C118ECBC291F8808003ACE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C118ECBA291F8808003ACE59 /* Main.storyboard */; };
 		C118ECBE291F880B003ACE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C118ECBD291F880B003ACE59 /* Assets.xcassets */; };
 		C118ECC1291F880B003ACE59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C118ECBF291F880B003ACE59 /* LaunchScreen.storyboard */; };
 		C118ECC9291F8839003ACE59 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECC8291F8839003ACE59 /* Products.swift */; };
 		C118ECCF291F8FA0003ACE59 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECCE291F8FA0003ACE59 /* NetworkService.swift */; };
 		C13F277C2922060100CB43C5 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F277B2922060100CB43C5 /* ProductTableViewCell.swift */; };
-		C13F277E29221C6700CB43C5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F277D29221C6700CB43C5 /* TestViewController.swift */; };
 		C1E87631291FC126009691E0 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E87630291FC126009691E0 /* ProductTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,7 @@
 		C118ECB1291F8808003ACE59 /* OnlineCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C118ECB4291F8808003ACE59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C118ECB6291F8808003ACE59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C118ECB8291F8808003ACE59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C118ECB8291F8808003ACE59 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		C118ECBB291F8808003ACE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C118ECBD291F880B003ACE59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C118ECC0291F880B003ACE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,7 +31,6 @@
 		C118ECC8291F8839003ACE59 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		C118ECCE291F8FA0003ACE59 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C13F277B2922060100CB43C5 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
-		C13F277D29221C6700CB43C5 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C1E87630291FC126009691E0 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,10 +120,9 @@
 		C1E87632291FC130009691E0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C118ECB8291F8808003ACE59 /* ViewController.swift */,
+				C118ECB8291F8808003ACE59 /* ProductDetailViewController.swift */,
 				C1E87630291FC126009691E0 /* ProductTableViewController.swift */,
 				C13F277B2922060100CB43C5 /* ProductTableViewCell.swift */,
-				C13F277D29221C6700CB43C5 /* TestViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -202,8 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C118ECCF291F8FA0003ACE59 /* NetworkService.swift in Sources */,
-				C118ECB9291F8808003ACE59 /* ViewController.swift in Sources */,
-				C13F277E29221C6700CB43C5 /* TestViewController.swift in Sources */,
+				C118ECB9291F8808003ACE59 /* ProductDetailViewController.swift in Sources */,
 				C118ECC9291F8839003ACE59 /* Products.swift in Sources */,
 				C118ECB5291F8808003ACE59 /* AppDelegate.swift in Sources */,
 				C13F277C2922060100CB43C5 /* ProductTableViewCell.swift in Sources */,
