@@ -15,6 +15,7 @@
 		C118ECC1291F880B003ACE59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C118ECBF291F880B003ACE59 /* LaunchScreen.storyboard */; };
 		C118ECC9291F8839003ACE59 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECC8291F8839003ACE59 /* Products.swift */; };
 		C118ECCF291F8FA0003ACE59 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECCE291F8FA0003ACE59 /* NetworkService.swift */; };
+		C1E87631291FC126009691E0 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E87630291FC126009691E0 /* ProductTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C118ECC2291F880B003ACE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C118ECC8291F8839003ACE59 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		C118ECCE291F8FA0003ACE59 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C1E87630291FC126009691E0 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +62,12 @@
 		C118ECB3291F8808003ACE59 /* OnlineCatalog */ = {
 			isa = PBXGroup;
 			children = (
-				C118ECB4291F8808003ACE59 /* AppDelegate.swift */,
-				C118ECB6291F8808003ACE59 /* SceneDelegate.swift */,
-				C118ECB8291F8808003ACE59 /* ViewController.swift */,
-				C118ECCD291F8F4F003ACE59 /* NetworkService */,
+				C1E87632291FC130009691E0 /* ViewController */,
 				C118ECCA291F8F03003ACE59 /* Model */,
-				C118ECBA291F8808003ACE59 /* Main.storyboard */,
-				C118ECBD291F880B003ACE59 /* Assets.xcassets */,
-				C118ECBF291F880B003ACE59 /* LaunchScreen.storyboard */,
-				C118ECC2291F880B003ACE59 /* Info.plist */,
+				C118ECCD291F8F4F003ACE59 /* Services */,
+				C1C00595291FEE4900F4CEBA /* StoryBoards */,
+				C1C00594291FEE3600F4CEBA /* Resurces */,
+				C1C00593291FEC9900F4CEBA /* App */,
 			);
 			path = OnlineCatalog;
 			sourceTree = "<group>";
@@ -81,12 +80,48 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C118ECCD291F8F4F003ACE59 /* NetworkService */ = {
+		C118ECCD291F8F4F003ACE59 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				C118ECCE291F8FA0003ACE59 /* NetworkService.swift */,
 			);
-			path = NetworkService;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C1C00593291FEC9900F4CEBA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C118ECB4291F8808003ACE59 /* AppDelegate.swift */,
+				C118ECB6291F8808003ACE59 /* SceneDelegate.swift */,
+				C118ECC2291F880B003ACE59 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C1C00594291FEE3600F4CEBA /* Resurces */ = {
+			isa = PBXGroup;
+			children = (
+				C118ECBD291F880B003ACE59 /* Assets.xcassets */,
+			);
+			path = Resurces;
+			sourceTree = "<group>";
+		};
+		C1C00595291FEE4900F4CEBA /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				C118ECBA291F8808003ACE59 /* Main.storyboard */,
+				C118ECBF291F880B003ACE59 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		C1E87632291FC130009691E0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C118ECB8291F8808003ACE59 /* ViewController.swift */,
+				C1E87630291FC126009691E0 /* ProductTableViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +199,7 @@
 				C118ECB9291F8808003ACE59 /* ViewController.swift in Sources */,
 				C118ECC9291F8839003ACE59 /* Products.swift in Sources */,
 				C118ECB5291F8808003ACE59 /* AppDelegate.swift in Sources */,
+				C1E87631291FC126009691E0 /* ProductTableViewController.swift in Sources */,
 				C118ECB7291F8808003ACE59 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YD2Y3M8V2Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OnlineCatalog/Info.plist;
+				INFOPLIST_FILE = OnlineCatalog/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -344,7 +380,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YD2Y3M8V2Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OnlineCatalog/Info.plist;
+				INFOPLIST_FILE = OnlineCatalog/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
