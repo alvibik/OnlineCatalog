@@ -22,3 +22,4 @@ struct Product: Codable {
     let thumbnail: String
     let images: [String]
 }
+
