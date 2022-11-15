@@ -21,8 +21,8 @@ final class ProductTableViewCell: UITableViewCell {
     
     func configure(with product: Product) {
         productTitleLabel.text = product.title
-        productPriceLabel.text = "Price: \(product.price) $"
-        productDiscountLabel.text = "⭐️ \(product.rating) out of 5 "
+        productPriceLabel.text = "Price: \(product.price ?? 0) $"
+        productDiscountLabel.text = "⭐️ \(product.rating ?? 0) out of 5 "
         
         NetworkManager.shared.fetchImage(from: product.thumbnail) { [weak self] result in
             switch result {

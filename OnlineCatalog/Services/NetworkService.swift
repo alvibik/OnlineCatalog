@@ -43,6 +43,20 @@ final class NetworkManager {
         }.resume()
     }
     
+    func fetchData(from Ur: String, completion: @escaping (Result‹Data, AFError>) - Void) {
+        AF.request (url)
+            .validate ()
+            .responseData { dataRequest in
+            switch dataRequest.result {
+            case .success(let data) :
+                completion (.success (data))
+            case .failure(let error):
+                completion(. failure (error))
+            }
+        }
+    }
+    
+    /*
     func fetchImage(from url: String?, completion: @escaping(Result<Data, NetworkError>) -> Void) {
         guard let url = URL(string: url ?? "") else {
             completion(.failure(.invalidURL))
@@ -57,5 +71,5 @@ final class NetworkManager {
                 completion(.success(imageData))
             }
         }
-    }
+    } */
 }

@@ -30,10 +30,10 @@ final class ProductDetailViewController: UIViewController {
         super.viewDidLoad()
         brandLabel.text = product.brand
         titleLabel.text = product.title
-        ratingLabel.text = "⭐️ \(product.rating) out of 5 "
-        priceLabel.text = "Price: \(product.price) $"
+        ratingLabel.text = "⭐️ \(product.rating ?? 5) out of 5 "
+        priceLabel.text = "Price: \(product.price ?? 0) $"
         descriptionLabel.text = product.description
-        stockLabel.text = ("In stock: \(product.stock > 0 ? "\(product.stock)" : "Out of stock")")
+        stockLabel.text = ("In stock: \(product.stock ?? 0 > 0 ? "\(product.stock ?? 0)" : "Out of stock")")
         configure(with: product)
     }
     
@@ -41,7 +41,7 @@ final class ProductDetailViewController: UIViewController {
     
     private func configure(with product: Product) {
         
-        NetworkManager.shared.fetchImage(from: product.images.randomElement()) { [weak self] result in
+        NetworkManager.shared.fetchImage(from: product.images?.randomElement()) { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.productImage.image = UIImage(data: imageData)
@@ -52,5 +52,7 @@ final class ProductDetailViewController: UIViewController {
         }
     }
 }
+
+adasdasd
 
 
