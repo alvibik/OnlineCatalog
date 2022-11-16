@@ -10,7 +10,7 @@ import UIKit
 final class ProductDetailViewController: UIViewController {
     
     //MARK: - Public properties
-  
+    
     var product: Product!
     
     //MARK: - IBOutlets
@@ -40,19 +40,31 @@ final class ProductDetailViewController: UIViewController {
     //MARK: - Private methods
     
     private func configure(with product: Product) {
-        
-        NetworkManager.shared.fetchImage(from: product.images?.randomElement()) { [weak self] result in
+        NetworkManager.shared.fetchData(from: product.images?.randomElement() ?? "") { result in
             switch result {
             case .success(let imageData):
-                self?.productImage.image = UIImage(data: imageData)
-                self?.activityIndicator.stopAnimating()
+                self.productImage.image = UIImage(data: imageData)
+                self.activityIndicator.stopAnimating()
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
     }
+    
+    /*
+     private func configure(with product: Product) {
+     
+     NetworkManager.shared.fetchImage(from: product.images?.randomElement()) { [weak self] result in
+     switch result {
+     case .success(let imageData):
+     self?.productImage.image = UIImage(data: imageData)
+     self?.activityIndicator.stopAnimating()
+     case .failure(let error):
+     print(error)
+     }
+     }
+     }
+     */
 }
-
-adasdasd
 
 

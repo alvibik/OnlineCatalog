@@ -24,6 +24,16 @@ final class ProductTableViewCell: UITableViewCell {
         productPriceLabel.text = "Price: \(product.price ?? 0) $"
         productDiscountLabel.text = "⭐️ \(product.rating ?? 0) out of 5 "
         
+        NetworkManager.shared.fetchData(from: product.thumbnail ?? "") { result in
+            switch result {
+            case .success(let imageData):
+                self.productThumbnailImage.image = UIImage(data: imageData)
+                self.activityIndicator.stopAnimating()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        /*
         NetworkManager.shared.fetchImage(from: product.thumbnail) { [weak self] result in
             switch result {
             case .success(let imageData):
@@ -33,5 +43,6 @@ final class ProductTableViewCell: UITableViewCell {
                 print(error)
             }
         }
+        */
     }
 }

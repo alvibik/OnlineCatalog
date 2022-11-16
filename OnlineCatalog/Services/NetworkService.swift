@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum NetworkError: Error {
     case invalidURL
@@ -17,6 +18,20 @@ final class NetworkManager {
     static let shared = NetworkManager()
     
     private init() {}
+    
+    func fetchProducts (from Url: String, completion: @escaping (Result<[Product], AFError>) -> Void) {
+        AF.request (Url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success (let value):
+                    let products = Product.getProduct(from: value)
+                    completion (.success (products))
+                case .failure (let error):
+                    completion(.failure (error))
+                }
+            }
+    }
     
     func fetch<T: Decodable>(_ type: T.Type, from url: String?, completion: @escaping(Result<T,NetworkError>) -> Void) {
         guard let url = URL(string: url ?? "") else {
@@ -43,7 +58,8 @@ final class NetworkManager {
         }.resume()
     }
     
-    func fetchData(from Ur: String, completion: @escaping (Result‹Data, AFError>) - Void) {
+    
+    func fetchData(from url: String, completion: @escaping (Result<Data, AFError>) -> Void) {
         AF.request (url)
             .validate ()
             .responseData { dataRequest in

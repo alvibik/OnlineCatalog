@@ -6,8 +6,9 @@
 //
 // MARK: - Products
 struct Products: Codable {
-    let products: [Product]
+    var products: [Product]
 }
+
 
 // MARK: - Product
 struct Product: Codable {
@@ -56,3 +57,4 @@ struct Product: Codable {
         return productsData.compactMap{ Product(productData: $0) }
     }
 }
+
