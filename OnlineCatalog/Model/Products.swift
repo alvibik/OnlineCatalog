@@ -4,11 +4,11 @@
 //
 //  Created by albik on 12.11.2022.
 //
+
 // MARK: - Products
 struct Products: Codable {
-    var products: [Product]
+    let products: [Product]
 }
-
 
 // MARK: - Product
 struct Product: Codable {
@@ -49,12 +49,13 @@ struct Product: Codable {
         category = productData["category"] as? String
         thumbnail = productData["thumbnail"] as? String
         images = productData["images"] as? [String]
-        
     }
     
     static func getProduct(from value: Any) -> [Product] {
-        guard let productsData = value as? [[String: Any]] else { return [] }
-        return productsData.compactMap{ Product(productData: $0) }
+        guard let productsData = value as? [String: Any] else { return []}
+        guard let productsResult = productsData["products"] as? [[String: Any]] else { return []}
+
+        return productsResult.compactMap{Product(productData: $0)}
     }
 }
 

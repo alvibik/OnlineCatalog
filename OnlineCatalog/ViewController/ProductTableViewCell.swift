@@ -33,16 +33,5 @@ final class ProductTableViewCell: UITableViewCell {
                 print(error.localizedDescription)
             }
         }
-        /*
-        NetworkManager.shared.fetchImage(from: product.thumbnail) { [weak self] result in
-            switch result {
-            case .success(let imageData):
-                self?.productThumbnailImage.image = UIImage(data: imageData)
-                self?.activityIndicator.stopAnimating()
-            case .failure(let error):
-                print(error)
-            }
-        }
-        */
     }
 }

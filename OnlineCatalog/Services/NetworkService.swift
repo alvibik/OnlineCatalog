@@ -19,7 +19,7 @@ final class NetworkManager {
     
     private init() {}
     
-    func fetchProducts (from Url: String, completion: @escaping (Result<[Product], AFError>) -> Void) {
+    func fetchProducts(from Url: String, completion: @escaping (Result<[Product], AFError>) -> Void) {
         AF.request (Url)
             .validate()
             .responseJSON { dataResponse in
@@ -33,32 +33,6 @@ final class NetworkManager {
             }
     }
     
-    func fetch<T: Decodable>(_ type: T.Type, from url: String?, completion: @escaping(Result<T,NetworkError>) -> Void) {
-        guard let url = URL(string: url ?? "") else {
-            completion(.failure(.invalidURL))
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
-            guard let data = data else {
-                completion(.failure(.noData))
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let type = try decoder.decode(T.self, from: data)
-                DispatchQueue.main.async {
-                    completion(.success(type))
-                }
-            } catch {
-                completion(.failure(.decodingError))
-            }
-        }.resume()
-    }
-    
-    
     func fetchData(from url: String, completion: @escaping (Result<Data, AFError>) -> Void) {
         AF.request (url)
             .validate ()
@@ -71,21 +45,4 @@ final class NetworkManager {
             }
         }
     }
-    
-    /*
-    func fetchImage(from url: String?, completion: @escaping(Result<Data, NetworkError>) -> Void) {
-        guard let url = URL(string: url ?? "") else {
-            completion(.failure(.invalidURL))
-            return
-        }
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: url) else {
-                completion(.failure(.noData))
-                return
-            }
-            DispatchQueue.main.async {
-                completion(.success(imageData))
-            }
-        }
-    } */
 }

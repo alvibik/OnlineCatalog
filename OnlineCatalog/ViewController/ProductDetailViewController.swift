@@ -11,7 +11,7 @@ final class ProductDetailViewController: UIViewController {
     
     //MARK: - Public properties
     
-    var product: Product!
+    var product: Product?
     
     //MARK: - IBOutlets
     
@@ -28,13 +28,13 @@ final class ProductDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        brandLabel.text = product.brand
-        titleLabel.text = product.title
-        ratingLabel.text = "⭐️ \(product.rating ?? 5) out of 5 "
-        priceLabel.text = "Price: \(product.price ?? 0) $"
-        descriptionLabel.text = product.description
-        stockLabel.text = ("In stock: \(product.stock ?? 0 > 0 ? "\(product.stock ?? 0)" : "Out of stock")")
-        configure(with: product)
+        brandLabel.text = product?.brand
+        titleLabel.text = product?.title
+        ratingLabel.text = "⭐️ \(product?.rating ?? 5) out of 5 "
+        priceLabel.text = "Price: \(product?.price ?? 0) $"
+        descriptionLabel.text = product?.description
+        stockLabel.text = ("In stock: \(product?.stock ?? 0 > 0 ? "\(product?.stock ?? 0)" : "Out of stock")")
+        configure(with: product ?? Product(productData: [:]))
     }
     
     //MARK: - Private methods
@@ -50,21 +50,6 @@ final class ProductDetailViewController: UIViewController {
             }
         }
     }
-    
-    /*
-     private func configure(with product: Product) {
-     
-     NetworkManager.shared.fetchImage(from: product.images?.randomElement()) { [weak self] result in
-     switch result {
-     case .success(let imageData):
-     self?.productImage.image = UIImage(data: imageData)
-     self?.activityIndicator.stopAnimating()
-     case .failure(let error):
-     print(error)
-     }
-     }
-     }
-     */
 }
 
 
