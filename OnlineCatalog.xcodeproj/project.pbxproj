@@ -16,6 +16,7 @@
 		C118ECC9291F8839003ACE59 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECC8291F8839003ACE59 /* Products.swift */; };
 		C118ECCF291F8FA0003ACE59 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C118ECCE291F8FA0003ACE59 /* NetworkService.swift */; };
 		C13F277C2922060100CB43C5 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F277B2922060100CB43C5 /* ProductTableViewCell.swift */; };
+		C160ECA92927578E00E6E498 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C160ECA82927578E00E6E498 /* ImageCacheManager.swift */; };
 		C1E87631291FC126009691E0 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E87630291FC126009691E0 /* ProductTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		C118ECC8291F8839003ACE59 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		C118ECCE291F8FA0003ACE59 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C13F277B2922060100CB43C5 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		C160ECA82927578E00E6E498 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		C1E87630291FC126009691E0 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				C118ECCE291F8FA0003ACE59 /* NetworkService.swift */,
+				C160ECA82927578E00E6E498 /* ImageCacheManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				C118ECB9291F8808003ACE59 /* ProductDetailViewController.swift in Sources */,
 				C118ECC9291F8839003ACE59 /* Products.swift in Sources */,
 				C118ECB5291F8808003ACE59 /* AppDelegate.swift in Sources */,
+				C160ECA92927578E00E6E498 /* ImageCacheManager.swift in Sources */,
 				C13F277C2922060100CB43C5 /* ProductTableViewCell.swift in Sources */,
 				C1E87631291FC126009691E0 /* ProductTableViewController.swift in Sources */,
 				C118ECB7291F8808003ACE59 /* SceneDelegate.swift in Sources */,
